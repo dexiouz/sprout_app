@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useReducer, useMemo, useEffect, useContext } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AuthStackScreen from './AuthNavigator';
@@ -74,7 +75,7 @@ const Route = () => {
   };
 
   useEffect(() => {
-    // SplashScreen.hide();
+    SplashScreen.hide();
     retrieveToken();
   }, []);
 
